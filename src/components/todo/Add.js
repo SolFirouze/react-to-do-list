@@ -23,11 +23,11 @@ function Add(props) {
                     name="title"
                     rules={[{ message: 'Please input todo!' }]}
                 >
-                    <Input />
+                    <Input data-testid='todo-input'/>
                 </Form.Item>
 
                 <Form.Item>
-                    <Button type="primary" htmlType="submit">
+                    <Button data-testid='todo-button' type="primary" htmlType="submit">
                         Add To-do
                     </Button>
                 </Form.Item>

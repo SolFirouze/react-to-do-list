@@ -27,7 +27,7 @@ function List(props) {
                         />
                     </Popconfirm>
                     <Link to={`/todo/${record.id}/edit`}>
-                        <EditOutlined />
+                        <EditOutlined data-testid={`todo-delete-${record.id}`}/>
                     </Link>
                 </>
             )
@@ -42,7 +42,7 @@ function List(props) {
 
         <div>
             <Add/>
-            <Table dataSource={props.todo} columns={columns} rowKey='id'/>
+            <Table  data-testid='todo-button' dataSource={props.todo} columns={columns} rowKey='id'/>
         </div>
     );
 }
